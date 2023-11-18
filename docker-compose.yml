@@ -9,7 +9,7 @@ services:
     tty: true
     volumes:
       - ./files:/files
-      - whisper_data:/root/.cache/whisper
+      - whisper_data:/root
 
 volumes:
   whisper_data:
