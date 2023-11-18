@@ -1,0 +1,15 @@
+services:
+  whisper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - PYTHON_VERSION=${PYTHON_VERSION}
+    hostname: whisper
+    tty: true
+    volumes:
+      - ./files:/files
+      - whisper_data:/root/.cache/whisper
+
+volumes:
+  whisper_data:
